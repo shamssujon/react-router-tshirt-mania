@@ -21,8 +21,14 @@ const Cart = ({ cart, handleRemoveItem }) => {
                 ) : (
                     <p>{cart.length} products in cart</p>
                 )} */}
-                {cart.length === 0 && <p>No products in cart!!</p>}
-                {cart.length === 0 || <p>some products in cart!!</p>}
+                {/* {cart.length === 0 && <p>No products in cart!!</p>}
+                {cart.length === 0 || <p>some products in cart!!</p>} */}
+                <div className={cart.length === 0 ? `bg-rose-600` : `bg-lime-600`}>
+                    Buy now quick
+                </div>
+                <div className={`uppercase ${cart.length === 0 ? "bg-rose-600" : "bg-lime-600"}`}>
+                    Buy now quick
+                </div>
                 {cart.map((cartProduct) => (
                     <div
                         key={cartProduct._id}
