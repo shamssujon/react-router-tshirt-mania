@@ -1,12 +1,17 @@
 import React from "react";
 
 const Cart = ({ cart, handleRemoveItem }) => {
+    let message;
+    if (cart.length === 0) {
+        message = <p>No products in cart</p>;
+    }
+
     return (
         <div className="sticky top-0 rounded border bg-white p-6 shadow">
             <h5 className="mb-8 text-xl">Order quantity: {cart.length}</h5>
 
             <div className="grid gap-3">
-                {cart.length === 0 && <p>No products in cart</p>}
+                {message}
                 {cart.map((cartProduct) => (
                     <div
                         key={cartProduct._id}
@@ -35,3 +40,10 @@ const Cart = ({ cart, handleRemoveItem }) => {
 };
 
 export default Cart;
+
+/*
+Conditional rendering
+1. using if-else
+
+
+*/

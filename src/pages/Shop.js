@@ -20,6 +20,7 @@ const Shop = () => {
         const remaining = cart.filter((selectedProduct) => selectedProduct._id !== cartProduct._id);
         setCart(remaining);
     };
+
     return (
         <div className="bg-slate-50 py-20">
             <div className="container">
