@@ -15,7 +15,12 @@ const Cart = ({ cart, handleRemoveItem }) => {
             <h5 className="mb-8 text-xl">Order quantity: {cart.length}</h5>
 
             <div className="grid gap-3">
-                {message}
+                {/* {message} */}
+                {cart.length === 0 ? (
+                    <p>No products in cart!!</p>
+                ) : (
+                    <p>{cart.length} products in cart</p>
+                )}
                 {cart.map((cartProduct) => (
                     <div
                         key={cartProduct._id}
@@ -48,6 +53,6 @@ export default Cart;
 /*
 Conditional rendering
 1. using if-else
-
+2. Ternary operator -- condition ? true : false
 
 */
