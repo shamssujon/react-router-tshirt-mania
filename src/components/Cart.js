@@ -16,11 +16,13 @@ const Cart = ({ cart, handleRemoveItem }) => {
 
             <div className="grid gap-3">
                 {/* {message} */}
-                {cart.length === 0 ? (
+                {/* {cart.length === 0 ? (
                     <p>No products in cart!!</p>
                 ) : (
                     <p>{cart.length} products in cart</p>
-                )}
+                )} */}
+                {cart.length === 0 && <p>No products in cart!!</p>}
+                {cart.length === 0 || <p>some products in cart!!</p>}
                 {cart.map((cartProduct) => (
                     <div
                         key={cartProduct._id}
@@ -54,5 +56,6 @@ export default Cart;
 Conditional rendering
 1. using if-else
 2. Ternary operator -- condition ? true : false
-
+3. && operator -- if condition is true, display an element
+3. || operator -- if condition is false, display an element
 */
