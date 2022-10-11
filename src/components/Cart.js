@@ -4,6 +4,10 @@ const Cart = ({ cart, handleRemoveItem }) => {
     let message;
     if (cart.length === 0) {
         message = <p>No products in cart</p>;
+    } else if (cart.length === 1) {
+        message = <p>Buy One more item</p>;
+    } else {
+        message = <p>{cart.length} items selected</p>;
     }
 
     return (
